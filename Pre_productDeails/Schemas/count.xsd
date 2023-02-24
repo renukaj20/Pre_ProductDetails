@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/count" xmlns:tns="http://www.example.org/count" elementFormDefault="qualified">
+
+    <complexType name="RootType">
+    	<sequence>
+    		<element name="lineID" type="string"></element>
+    		<element name="count" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Root" type="tns:Root"></element>
+
+    <complexType name="Root">
+    	<sequence>
+    		<element name="rootType" type="tns:RootType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>
